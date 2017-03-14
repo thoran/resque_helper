@@ -1,4 +1,4 @@
-esque.after_fork = Proc.new{ActiveRecord::Base.establish_connection}
+Resque.after_fork = Proc.new{ActiveRecord::Base.establish_connection}
 
 if ENV['REDISTOGO_URL']
   uri = URI.parse(ENV['REDISTOGO_URL'])
